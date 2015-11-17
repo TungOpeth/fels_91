@@ -1,0 +1,7 @@
+<li id="<%= word.id %>">
+  <span class="user"><b><%= word.content %></b></span>
+  <span>
+      <%= link_to (t :delete), supervisor_word_path(word), method: :delete,
+                                       data: { confirm: (t :you_sure) } %>
+  </span>
+</li>

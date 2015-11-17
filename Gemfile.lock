@@ -47,10 +47,6 @@ GEM
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.2.2)
-    byebug (3.4.0)
-      columnize (~> 0.8)
-      debugger-linecache (~> 1.2)
-      slop (~> 3.6)
     cancancan (1.13.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -65,9 +61,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    columnize (0.9.0)
     debug_inspector (0.0.2)
-    debugger-linecache (1.2.0)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -298,7 +292,6 @@ DEPENDENCIES
   bcrypt (= 3.1.7)
   bootstrap-sass (= 3.2.0.0)
   bootstrap-will_paginate (= 0.0.10)
-  byebug (= 3.4.0)
   cancancan
   carrierwave (= 0.10.0)
   coffee-rails (= 4.1.0)
@@ -313,6 +306,7 @@ DEPENDENCIES
   minitest-reporters (= 1.0.5)
   net-ssh
   pg (= 0.17.1)
+  pry
   puma (= 2.11.1)
   rails (= 4.2.2)
   rails_12factor (= 0.0.2)

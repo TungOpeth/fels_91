@@ -11,5 +11,11 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+
+  namespace :supervisor do
+    resources :categories
+    resources :words
+    resources :word_answers
+  end
   resources :users
 end
