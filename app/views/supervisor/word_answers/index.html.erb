@@ -1,0 +1,8 @@
+<h1>All word answers(<%= @word_answers.count %>)</h1>
+<div class="row">
+      <ol class="users">
+        <%= render @word_answers %>
+      </ol>
+      <%= will_paginate @word_answers %>
+  </div>
+</div>

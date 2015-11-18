@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:supervisor, @category] do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <h2>Add Words</h2>
+        <%= f.fields_for :words do |builder|%>
+          <%= render 'word_fields', f: builder %>
+        <% end %>
+        <p>
+          <%= link_to_add_fields (t :AddNewWord), f, :words %>
+        </p>
+      <%= f.submit (t :CreateNewCategory), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

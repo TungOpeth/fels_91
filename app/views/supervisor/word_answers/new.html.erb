@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:supervisor, @word_answer] do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content, class: 'form-control' %>
+      <%= f.radio_button :correct, WordAnswer::TRUE %>
+      <%= t :true %></br>
+      <%= f.radio_button :correct, WordAnswer::FALSE %>
+      <%= t :false %>
+      <h2>Words</h2>
+      <% @words.each do |word| %>
+        <%= f.radio_button :word_id, word.id %>
+        <%= f.label word.content %></br>
+      <% end %>
+
+      <%= f.submit (t :CreateNewWordAnswer), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

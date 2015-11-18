@@ -1,0 +1,8 @@
+<h1>All categories(<%= @categories.count %>)</h1>
+<div class="row">
+      <ol class="users">
+        <%= render @categories %>
+      </ol>
+      <%= will_paginate @categories %>
+  </div>
+</div>
