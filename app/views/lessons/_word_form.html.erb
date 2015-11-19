@@ -1,0 +1,15 @@
+<div class="fields">
+  <ol>
+      <li>
+        <%= f.object.word.content %>
+        <ul>
+          <% f.object.word.word_answers.each do |word_answer| %>
+          <li>
+            <%= word_answer.content %>
+            <%= f.radio_button :word_answer_id, word_answer.id %>
+          </li>
+          <% end %>
+        </ul>
+      </li>
+  </ol>
+</div>

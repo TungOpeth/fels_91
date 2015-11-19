@@ -1,0 +1,7 @@
+<li id="<%= category.id %>">
+  <span class="user"><b><%= category.name %></b></span>
+  <%= form_for Lesson.new do |f|%>
+    <%= f.hidden_field :category_id, value: category.id %>
+    <%= f.submit (t :Start) %>
+  <% end %>
+</li>

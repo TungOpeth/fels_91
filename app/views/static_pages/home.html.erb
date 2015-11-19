@@ -11,6 +11,9 @@
   <%= link_to (t :AddNewWordAnswer), new_supervisor_word_answer_path %>|
   <%= link_to (t :ViewWordAnswers), supervisor_word_answers_path %>
 <% else %>
+  <h1>USER HOME</h1>
+  <h2><%= link_to (t :ViewWords), words_path %></h2>
+  <h2><%= link_to (t :ViewCategories), categories_path %></h2>
 <% end %>
 <% else %>
 <div class="center jumbotron">

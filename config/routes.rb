@@ -18,4 +18,7 @@ Rails.application.routes.draw do
     resources :word_answers
   end
   resources :users
+  resources :words, only: [:index]
+  resources :categories, only: [:index, :show]
+  resources :lessons
 end

@@ -1,0 +1,13 @@
+<h1><%= t :result %> (<%= @lesson.result %>)</h1>
+<% @lesson.lesson_words.each do |lesson_word| %>
+  <li>
+    <%= lesson_word.word.content %>|
+    <% if lesson_word.word_answer.nil? %>
+      <%= t "you_didnt_select_answer" %>
+    <% else %>
+      <%= t "your_answer" %>: <%= lesson_word.word_answer.content %>|
+      <%= lesson_word.word_answer.correct ? t("you_have_true_answer") :
+        t("you_have_false_answer") %>
+    <% end %>
+  </li>
+<% end %>
